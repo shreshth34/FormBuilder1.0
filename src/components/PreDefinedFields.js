@@ -15,6 +15,7 @@ export class PreDefinedFields extends Component {
       fontFamily: "Roboto",
       fontSize: "14px",
       lineHeight: "19px",
+      marginLeft: "5px"
     };
 
     const angleIcon = {

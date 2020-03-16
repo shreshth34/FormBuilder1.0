@@ -5,7 +5,7 @@ export class Renderer extends Component {
     render() {
         return (
             <div className="renderer">
-             
+                
             </div>
         )
     }

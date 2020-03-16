@@ -1,20 +1,16 @@
 import React, { Component } from "react";
 import "../App.css";
-const showFieldsOnClick = () => {
-
-  
-
-}
+const showFieldsOnClick = () => {};
 
 export class AddOns extends Component {
   render() {
     const pStyle = {
       height: "19px",
-      width: "88px",
+      width: "65px",
       color: "#2EA3C8",
       fontFamily: "Roboto",
       fontSize: "14px",
-      lineHeight: "19px",
+      lineHeight: "19px"
     };
 
     const angleIcon = {

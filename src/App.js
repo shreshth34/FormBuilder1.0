@@ -55,7 +55,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="ui container">
+      <div className="App">
         <div className="ui equal width stackable grid">
           <div className="column">
             <Toolbox data={this.state.uiElements} />
