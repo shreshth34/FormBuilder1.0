@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../App.css";
+import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
 import FieldDiv from "./FieldDiv";
 
 export class BasicFields extends Component {

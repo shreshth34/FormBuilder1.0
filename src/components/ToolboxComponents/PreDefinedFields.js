@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import "../App.css";
-const showFieldsOnClick = () => {};
+import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
 
-export class AddOns extends Component {
+const showFieldsOnClick = () => {
+    console.log("you clicked me")
+}
+
+export class PreDefinedFields extends Component {
   render() {
+   
+
     const pStyle = {
       height: "19px",
-      width: "65px",
+      width: "120px",
       color: "#2EA3C8",
       fontFamily: "Roboto",
       fontSize: "14px",
-      lineHeight: "19px"
+      lineHeight: "19px",
+      marginLeft: "5px"
     };
 
     const angleIcon = {
@@ -22,7 +28,7 @@ export class AddOns extends Component {
     return (
       <div className="ui grid" id="basic_fields" onClick={showFieldsOnClick}>
         <div className="thirteen wide column">
-          <p style={pStyle}>Add ons</p>
+          <p style={pStyle}>Pre - defined Fields</p>
         </div>
         <div className="three wide column">
           <span className="FormBuilderText" id="show_icon">
@@ -36,4 +42,4 @@ export class AddOns extends Component {
   }
 }
 
-export default AddOns;
+export default PreDefinedFields;

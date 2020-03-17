@@ -12,6 +12,7 @@
   
 }
 
+
 #basic_fields{
   margin-left: 10px;
   margin-top:  10px;
@@ -50,21 +51,17 @@
   font-size: 18px;
   line-height: 24px;
 }
+
 #display_grid{
   display:none;
 }
 
-
-
 .renderer{
+
     margin-top: 100px;
     margin-right: 500px;
     height: 619px;
-    width: 797px;
-    background-color: #FFFFFF;
+    width: 900px;
+    background-color: red;
     box-shadow: 0 1px 2px 0 rgba(34,36,38,0.15);
-  
 }
-
-
-

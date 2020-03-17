@@ -1,10 +1,10 @@
 import React from "react";
-import ToolboxNavbar from "./ToolboxNavbar";
-import SearchComponent from './SearchComponent';
-import BasicFields from './BasicFields'
+import ToolboxNavbar from "./ToolboxComponents/ToolboxNavbar";
+import SearchComponent from './ToolboxComponents/SearchComponent';
+import BasicFields from './ToolboxComponents/BasicFields'
 import "../App.css";
-import PreDefinedFields from "./PreDefinedFields";
-import AddOns from "./AddOns";
+import PreDefinedFields from "./ToolboxComponents/PreDefinedFields";
+import AddOns from "./ToolboxComponents/AddOns";
 
 const Toolbox =(props) =>{
   console.log("toolbox",props.data)  

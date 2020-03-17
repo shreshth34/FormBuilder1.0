@@ -8,6 +8,9 @@ class App extends Component {
     super();
 
     this.state = {
+      FormTitle:"Untitled Form",
+      FormDescription:"Form Description",
+
       uiElements: [
         {
           type: "Text Field",
@@ -56,13 +59,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="ui equal width stackable grid">
-          <div className="column">
+        <div className="ui stackable grid">
+          <div className="four wide column">
             <Toolbox data={this.state.uiElements} />
           </div>
-          <div className="column">
+          <div className="twelve wide column">
             <div className="ui container">
-              <Renderer />
+              <Renderer title={this.state.FormTitle} desc={this.state.FormDescription} />
             </div>
           </div>
         </div>
