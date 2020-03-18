@@ -1,33 +1,37 @@
 import React, { Component } from "react";
 import "../App.css";
-import AddField from "./RendererComponents/AddField";
+import AddRow from "./RendererComponents/AddRow";
+
+
+const addNewRow = () => {
+
+    
+}
+
 
 export class Renderer extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props) {
-        super(props)
+    this.state= {
+        
     }
+  }
 
-    render() {
-        return (
-            
-            <div className="renderer">
-                <button>new row</button>               
-                <div className="header"> {this.props.title} <br /> {this.props.desc}</div>
-                <div className="ui container">
-                <div className="ui grid">
-                    <div className="eight wide column">
-                        <AddField />
-                    </div>
-                    <div className="eight wide column">
-                        <AddField />
-                    </div>
-                    
-                </div>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="renderer">
+        <button onClick={addNewRow}> new row </button>
+        <div className="header">
+          {this.props.data[0].FormTitle} <br />
+          {this.props.data[0].FormDescription}
+        </div>
+        <div className="ui two column grid" align="center">
+         <AddRow />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Renderer;

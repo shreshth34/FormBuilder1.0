@@ -8,8 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      FormTitle: "Untitled Form",
-      FormDescription: "Form Description",
+      
 
       uiElements: [
         {
@@ -53,7 +52,7 @@ class App extends Component {
           icon: "small circle icon"
         }
       ],
-      PredefinedFields:[
+      PredefinedFields: [
         {
           type: "First Name",
           icon: "small circle icon"
@@ -70,11 +69,11 @@ class App extends Component {
           type: "Resume",
           icon: "small circle icon"
         }
-
-
       ],
-      FormFormat:[
-
+      FormFormat: [{
+        FormTitle: "Untitled Form",
+        FormDescription: "Form Description",
+      }
       ]
     };
   }
@@ -84,12 +83,15 @@ class App extends Component {
       <div className="App">
         <div className="ui two column stackable grid">
           <div className="column">
-            <Toolbox data={this.state.uiElements} predef={this.state.PredefinedFields} />
+            <Toolbox
+              data={this.state.uiElements}
+              predef={this.state.PredefinedFields}
+            />
           </div>
+
           <div className="column">
             <Renderer
-              title={this.state.FormTitle}
-              desc={this.state.FormDescription}
+             data={this.state.FormFormat}
             />
           </div>
         </div>

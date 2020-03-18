@@ -17,7 +17,12 @@ export class ToolboxNavbar extends Component {
             <i class="file light blue alternate outline icon"></i>Form Builder
           </span>
         </div>
-        <br /><br /><br /><br /><br /><br />    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
