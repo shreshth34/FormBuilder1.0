@@ -1,22 +1,30 @@
 import React, { Component } from "react";
-import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
-
-const showFieldsOnClick = () => {
-    console.log("you clicked me")
-}
+import "/Users/Shreshth Juneja/Desktop/FormBuilder/FormBuilder1.0/src/App.css";
+import FieldDiv from "./FieldDiv";
 
 export class PreDefinedFields extends Component {
-  render() {
-   
+  constructor(props) {
+    super(props);
+    this.state={
+      display_grid:"none",
+      basicIcon: "chevron right icon"
+    }
+    this.toggle_basic=this.toggle_basic.bind(this)
+  }
+  toggle_basic(){
+    this.setState({display_grid:this.state.display_grid==="none"?"block":"none",
+    basicIcon: this.state.basicIcon==="chevron down icon"?"chevron right icon":"chevron down icon"
+  })
 
+  }
+
+  render() {
     const pStyle = {
-      height: "19px",
-      width: "120px",
+      width: "88px",
       color: "#2EA3C8",
       fontFamily: "Roboto",
       fontSize: "14px",
-      lineHeight: "19px",
-      marginLeft: "5px"
+      lineHeight: "19px"
     };
 
     const angleIcon = {
@@ -26,17 +34,26 @@ export class PreDefinedFields extends Component {
     };
 
     return (
-      <div className="ui grid" id="basic_fields" onClick={showFieldsOnClick}>
-        <div className="thirteen wide column">
-          <p style={pStyle}>Pre - defined Fields</p>
+      <div className="ui grid" id="basic_fields">
+        <div className="row" id="row1" onClick={this.toggle_basic}>
+          <div className="thirteen wide column">
+            <p style={pStyle}> Basic Fields </p>
+          </div>
+          <div className="three wide column">
+            <span className="FormBuilderText" id="show_icon">
+              <i style={angleIcon} class={this.state.basicIcon}></i>
+            </span>
+          </div>
         </div>
-        <div className="three wide column">
-          <span className="FormBuilderText" id="show_icon">
-            <i style={angleIcon} class="chevron right icon"></i>
-          </span>
+        <div id="display_grid" className="ui grid my_grid" style={{display:this.state.display_grid}} >
+          {this.props.predef.map(e => {
+            return (
+              <div className="eight wide column">
+                <FieldDiv icon={e.icon} type={e.type} />
+              </div>
+            );
+          })}
         </div>
-
-        <div></div>
       </div>
     );
   }

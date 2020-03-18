@@ -8,8 +8,8 @@ class App extends Component {
     super();
 
     this.state = {
-      FormTitle:"Untitled Form",
-      FormDescription:"Form Description",
+      FormTitle: "Untitled Form",
+      FormDescription: "Form Description",
 
       uiElements: [
         {
@@ -52,6 +52,29 @@ class App extends Component {
           type: "Date/Time",
           icon: "small circle icon"
         }
+      ],
+      PredefinedFields:[
+        {
+          type: "First Name",
+          icon: "small circle icon"
+        },
+        {
+          type: "Last Name",
+          icon: "small circle icon"
+        },
+        {
+          type: "Middle Name",
+          icon: "small circle icon"
+        },
+        {
+          type: "Resume",
+          icon: "small circle icon"
+        }
+
+
+      ],
+      FormFormat:[
+
       ]
     };
   }
@@ -59,14 +82,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="ui stackable grid">
-          <div className="four wide column">
-            <Toolbox data={this.state.uiElements} />
+        <div className="ui two column stackable grid">
+          <div className="column">
+            <Toolbox data={this.state.uiElements} predef={this.state.PredefinedFields} />
           </div>
-          <div className="twelve wide column">
-            <div className="ui container">
-              <Renderer title={this.state.FormTitle} desc={this.state.FormDescription} />
-            </div>
+          <div className="column">
+            <Renderer
+              title={this.state.FormTitle}
+              desc={this.state.FormDescription}
+            />
           </div>
         </div>
       </div>

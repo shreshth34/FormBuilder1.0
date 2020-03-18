@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
+import "../App.css";
 import AddField from "./RendererComponents/AddField";
 
 export class Renderer extends Component {
@@ -10,8 +10,11 @@ export class Renderer extends Component {
 
     render() {
         return (
+            
             <div className="renderer">
+                <button>new row</button>               
                 <div className="header"> {this.props.title} <br /> {this.props.desc}</div>
+                <div className="ui container">
                 <div className="ui grid">
                     <div className="eight wide column">
                         <AddField />
@@ -20,6 +23,7 @@ export class Renderer extends Component {
                         <AddField />
                     </div>
                     
+                </div>
                 </div>
             </div>
         );

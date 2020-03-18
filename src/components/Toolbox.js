@@ -14,7 +14,7 @@ const Toolbox =(props) =>{
         <ToolboxNavbar />
         <SearchComponent />
         <BasicFields data={props.data}/>
-        <PreDefinedFields />
+        <PreDefinedFields predef={props.predef} />
         <AddOns />
          
       </div>
