@@ -11,7 +11,8 @@ export class AddOns extends Component {
       fontFamily: "Roboto",
       fontSize: "14px",
       lineHeight: "19px",
-      textAlign: "left"
+      textAlign: "left",
+      
     };
 
     const angleIcon = {

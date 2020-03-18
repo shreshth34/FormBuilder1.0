@@ -16,7 +16,7 @@ const Toolbox =(props) =>{
         <BasicFields data={props.data}/>
         <PreDefinedFields predef={props.predef} />
         <AddOns />
-         
+        
       </div>
     );
   

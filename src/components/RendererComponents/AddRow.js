@@ -9,7 +9,7 @@ const AddRow = (props) => {
           <AddField id={props.id} />
         </div>
         <div className="column">
-          <AddField id={props.id} />
+          <AddField  />
         </div>
       </div>
     

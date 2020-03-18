@@ -9,12 +9,11 @@ const addField = {
   width: "406px",
   borderRadius: "4px",
   backgroundColor: "#FFFFFF",
-  boxShadow: "0 1px 2px 0 rgba(34,36,38,0.15)"
+  boxShadow: "2px 2px 2px 2px black"
 }
 
 const AddField =(props)=> {
-   
-    
+       
         return (
         <div style={addField} id={props.id} >
             <div style={iconic}> <i class="blue plus circle icon"></i> </div>

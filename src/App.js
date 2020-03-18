@@ -40,7 +40,7 @@ class App extends Component {
         },
         {
           type: "Radio Button",
-          icon: "small circle icon"
+          icon: "small circle icon" 
         },
         {
           type: "Checkbox",
@@ -75,17 +75,29 @@ class App extends Component {
       ],
       FormFormat: [
         { 
-          type:"",
+          type:"First Name",
           id:22                             
         },                                                                                                                              
         
         {
-          type:"",
+          type:"Last Name",
           id:33
 
         },
         {
-          type:"",
+          type:"Middle Name",
+          id:44
+        },
+        {
+          type:"Middle Name",
+          id:44
+        },
+        {
+          type:"Middle Name",
+          id:44
+        },
+        {
+          type:"Middle Name",
           id:44
         }
       ]
@@ -97,16 +109,16 @@ class App extends Component {
  
     
     return (
-      <div className="App">
-        <div className="ui two column stackable grid">
-          <div className="column">
+      <div className="ui App">
+        <div className="ui equal width stackable grid">
+          <div className="six wide column">
             <Toolbox
               data={this.state.uiElements}
               predef={this.state.PredefinedFields}
             />
           </div>
 
-          <div className="column">
+          <div className="ten wide column">
             <Renderer
              data={this.state}
             />
