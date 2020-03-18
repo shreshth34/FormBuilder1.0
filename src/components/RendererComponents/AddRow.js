@@ -1,15 +1,15 @@
 import React from "react";
 import AddField from './AddField'
 
-const AddRow = () => {
+const AddRow = (props) => {
   return (
 
       <div className="row">
         <div className="column">
-          <AddField />
+          <AddField id={props.id} />
         </div>
         <div className="column">
-          <AddField />
+          <AddField id={props.id} />
         </div>
       </div>
     

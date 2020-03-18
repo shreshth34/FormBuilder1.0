@@ -8,6 +8,9 @@ class App extends Component {
     super();
 
     this.state = {
+
+      FormTitle: "Untitled Form",
+      FormDescription: "Form Description",
       
 
       uiElements: [
@@ -68,17 +71,31 @@ class App extends Component {
         {
           type: "Resume",
           icon: "small circle icon"
-        }
+        }       
       ],
-      FormFormat: [{
-        FormTitle: "Untitled Form",
-        FormDescription: "Form Description",
-      }
+      FormFormat: [
+        { 
+          type:"",
+          id:22                             
+        },                                                                                                                              
+        
+        {
+          type:"",
+          id:33
+
+        },
+        {
+          type:"",
+          id:44
+        }
       ]
     };
   }
 
   render() {
+
+ 
+    
     return (
       <div className="App">
         <div className="ui two column stackable grid">
@@ -91,7 +108,7 @@ class App extends Component {
 
           <div className="column">
             <Renderer
-             data={this.state.FormFormat}
+             data={this.state}
             />
           </div>
         </div>

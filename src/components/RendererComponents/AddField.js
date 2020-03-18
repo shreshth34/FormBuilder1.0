@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 const iconic = {
@@ -13,17 +12,16 @@ const addField = {
   boxShadow: "0 1px 2px 0 rgba(34,36,38,0.15)"
 }
 
-export class AddField extends Component {
-
+const AddField =(props)=> {
    
-    render() {
+    
         return (
-            <div style={addField} className="addPlace">
-            <div style={iconic} ><i class="blue plus circle icon"></i></div>
+        <div style={addField} id={props.id} >
+            <div style={iconic}> <i class="blue plus circle icon"></i> </div>
         </div>
         )
     }
-}
+
 
 export default AddField
 

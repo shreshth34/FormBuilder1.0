@@ -2,32 +2,24 @@ import React, { Component } from "react";
 import "../App.css";
 import AddRow from "./RendererComponents/AddRow";
 
-
-const addNewRow = () => {
-
-    
-}
-
-
 export class Renderer extends Component {
   constructor(props) {
     super(props);
 
-    this.state= {
-        
-    }
+    this.state = {};
   }
 
   render() {
     return (
       <div className="renderer">
-        <button onClick={addNewRow}> new row </button>
-        <div className="header">
-          {this.props.data[0].FormTitle} <br />
-          {this.props.data[0].FormDescription}
+        <div className="header" >
+          {this.props.data.FormTitle} <br />
+          {this.props.data.FormDescription}   
         </div>
         <div className="ui two column grid" align="center">
-         <AddRow />
+          {this.props.data.FormFormat.map(element => {
+            return <AddRow id={element.id} />;
+          })}
         </div>
       </div>
     );
