@@ -3,15 +3,14 @@ import "./App.css";
 import Toolbox from "./components/Toolbox";
 import Renderer from "./components/Renderer";
 
+
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-
       FormTitle: "Untitled Form",
       FormDescription: "Form Description",
-      
 
       uiElements: [
         {
@@ -40,7 +39,7 @@ class App extends Component {
         },
         {
           type: "Radio Button",
-          icon: "small circle icon" 
+          icon: "small circle icon"
         },
         {
           type: "Checkbox",
@@ -71,57 +70,83 @@ class App extends Component {
         {
           type: "Resume",
           icon: "small circle icon"
-        }       
-      ],
-      FormFormat: [
-        { 
-          type:"First Name",
-          id:22                             
-        },                                                                                                                              
-        
-        {
-          type:"Last Name",
-          id:33
-
-        },
-        {
-          type:"Middle Name",
-          id:44
-        },
-        {
-          type:"Middle Name",
-          id:44
-        },
-        {
-          type:"Middle Name",
-          id:44
-        },
-        {
-          type:"Middle Name",
-          id:44
         }
-      ]
+      ],
+      FormFormat: [   
+        
+        // {
+        //   type: "First Name",
+        //   id: 22,
+        //   uiElement:"Text Field",
+        //   addedField:[]
+        // },
+
+        // {
+        //   type: "Last Name",
+        //   id: 33,
+        //   uiElement:"Text Field",
+        //   addedField:[]
+
+        // },
+
+        // {
+        //   type: "Email",
+        //   id: 44,
+        //   uiElement:"Email",
+        //   addedField:[]
+
+        // },
+        // {
+        //   type: "Phone",
+        //   id: 55,
+        //   uiElement:"Number",
+        //   addedField:[]
+
+        // },
+        // {
+
+        //   type: "Resume",
+        //   id: 66,
+        //   uiElement:"File Upload",
+        //   addedField:[]
+
+        // },
+          
+      ]  
     };
   }
 
   render() {
+    console.log("here is form form",this.state)
 
- 
+    const setFormFormat = (e) => {
+        
+    this.setState({
+      FormFormat: [...this.state.FormFormat, e]
+    })
+
+    }
     
     return (
       <div className="ui App">
         <div className="ui equal width stackable grid">
           <div className="six wide column">
             <Toolbox
+            
               data={this.state.uiElements}
               predef={this.state.PredefinedFields}
+
             />
           </div>
 
           <div className="ten wide column">
-            <Renderer
-             data={this.state}
+
+            <Renderer data={this.state}
+
+             changed = {setFormFormat}
+
             />
+
           </div>
         </div>
       </div>

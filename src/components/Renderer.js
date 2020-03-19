@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../App.css";
 import AddRow from "./RendererComponents/AddRow";
 import AddField from "./RendererComponents/AddField";
-
 const title1 = {
   border: "1px solid white",
   height: "37px",
@@ -24,11 +23,17 @@ const desc1 = {
 export class Renderer extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {};
   }
 
   render() {
+    const addNewRow = () => {
+      return this.props.changed({ pos: "" });
+    };
+
+    const addNewColumn = () => {
+      return this.props.changed({});
+    };
+
     return (
       <div className="renderer">
         <div className="header">
@@ -39,11 +44,32 @@ export class Renderer extends Component {
           <p contenteditable="true" style={desc1} type="text">
             {this.props.data.FormDescription}
           </p>
+          <button className="ui primary button" onClick={addNewColumn}>
+            New Column
+          </button>
+          <button className="ui primary button" onClick={addNewRow}>
+            New Row
+          </button>
         </div>
-        <br /><br /><br />
-        <div className="ui two column grid" align="center">
+        <br />
+        <br />
+        <br />
+
+        <div
+          className="ui equal width three column stackable grid"
+          align="center"
+        >
           {this.props.data.FormFormat.map(element => {
-            return <AddRow id={element.id} />;
+            if (element.pos === undefined) {
+              return (
+                <div className="column">
+                  <AddField id={element.id} />
+                  <br />
+                </div>
+              );
+            } else {
+              return <div className="row"></div>;
+            }
           })}
         </div>
       </div>

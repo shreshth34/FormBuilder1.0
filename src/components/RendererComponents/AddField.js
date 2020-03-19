@@ -1,27 +1,27 @@
-import React, { Component } from 'react'
+import React from "react";
 
 const iconic = {
-    padding: "18px"
-}
+  padding: "18px",
+
+};
+
 
 const addField = {
-  height: "54.4px",
-  width: "406px",
+
   borderRadius: "4px",
   backgroundColor: "#FFFFFF",
-  boxShadow: "2px 2px 2px 2px black"
-}
+  boxShadow: "2px 2px 2px 2px lightblue"
+  
+};
 
-const AddField =(props)=> {
-       
-        return (
-        <div style={addField} id={props.id} >
-            <div style={iconic}> <i class="blue plus circle icon"></i> </div>
-        </div>
-        )
-    }
+const AddField = props => {
+  return (
+    <div style={addField} id={props.id}>
+      <div style={iconic}>        
+        <i class="blue plus circle icon"></i>{" "}
+      </div>
+    </div>
+  );
+};
 
-
-export default AddField
-
- 
+export default AddField;

@@ -6,8 +6,7 @@ import "../App.css";
 import PreDefinedFields from "./ToolboxComponents/PreDefinedFields";
 import AddOns from "./ToolboxComponents/AddOns";
 
-const Toolbox =(props) =>{
-  console.log("toolbox",props.data)  
+const Toolbox =(props) => {
   return (
       <div className="toolbox">
           
