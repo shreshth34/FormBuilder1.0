@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+
+
 
 const iconic = {
-  padding: "18px",
+  padding: "18px"
 
 };
 
@@ -14,14 +16,26 @@ const addField = {
   
 };
 
-const AddField = props => {
+class AddField extends Component {
+
+  constructor(props){
+    super(props)
+
+  }
+
+
+render(){
+ 
   return (
-    <div style={addField} id={props.id}>
+    <div style={addField} id={this.props.id}>
       <div style={iconic}>        
-        <i class="blue plus circle icon"></i>{" "}
+        <i class="blue plus circle icon"></i>
+        <p>{this.props.id}</p>
       </div>
+      <button onClick={this.props.delete}>remove</button>
     </div>
   );
-};
+}
+}
 
 export default AddField;
