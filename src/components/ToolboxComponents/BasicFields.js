@@ -22,6 +22,9 @@ export class BasicFields extends Component {
   }
 
   render() {
+    const selectField = y => {
+      console.log("y from basic fields", y);
+    };
     const pStyle = {
       height: "19px",
       width: "120px",
@@ -30,7 +33,7 @@ export class BasicFields extends Component {
       fontSize: "14px",
       lineHeight: "19px",
       textAlign: "left",
-      cursor:"pointer"
+      cursor: "pointer"
     };
 
     const angleIcon = {
@@ -59,7 +62,12 @@ export class BasicFields extends Component {
           {this.props.data.map(e => {
             return (
               <div className="eight wide column">
-                <FieldDiv icon={e.icon} type={e.type} />
+                <FieldDiv
+                  icon={e.icon}
+                  type={e.type}
+                  key1={e.id}
+                  selectField={selectField}
+                />
               </div>
             );
           })}

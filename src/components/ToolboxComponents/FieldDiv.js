@@ -38,7 +38,7 @@ export class FieldDiv extends Component {
 
     return (
 
-        <div style={basicFieldDiv}>
+        <div style={basicFieldDiv} key1={this.props.key1} onClick={()=>this.props.selectField(this.props.key1)}>
          <i className={this.props.icon} style={ovalStyle} ></i><span style={FieldText}>{this.props.type}</span>
         </div>
 

@@ -14,7 +14,7 @@ export class ToolboxNavbar extends Component {
         </div>
         <div style={textStyle} className="six wide column">
           <span className="FormBuilderText">
-            <i class="file light blue alternate outline icon"></i>Form Builder
+            <i className="file light blue alternate outline icon"></i>Form Builder
           </span>
         </div>
         <br />

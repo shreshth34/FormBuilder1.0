@@ -22,6 +22,12 @@ export class PreDefinedFields extends Component {
   }
 
   render() {
+    const selectField =(y) => {
+
+      console.log("y from predfined is here",y)
+
+    }
+    
     const pStyle = {
       height: "19px",
       width: "120px",
@@ -59,7 +65,7 @@ export class PreDefinedFields extends Component {
           {this.props.predef.map(e => {
             return (
               <div className="eight wide column">
-                <FieldDiv icon={e.icon} type={e.type} />
+                <FieldDiv icon={e.icon} type={e.type} key1={e.id} selectField={selectField} />
               </div>
             );
           })}

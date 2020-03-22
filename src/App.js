@@ -12,61 +12,70 @@ class App extends Component {
       FormDescription: "Form Description",
 
       uiElements: [
-        {
+        { id:"text",
           type: "Text Field",
           icon: "small font icon"
         },
-        {
+        { id:"desc",
           type: "Description",
           icon: "small circle icon"
         },
         {
+          id:"link",
           type: "Link",
           icon: "small circle icon"
         },
         {
+          id:"file",
           type: "File Upload",
           icon: "small circle icon"
         },
         {
+          id:"email",
           type: "Email",
           icon: "small circle icon"
         },
         {
+          id:"number",
           type: "Number",
           icon: "small circle icon"
         },
         {
+          id:"radio",
           type: "Radio Button",
           icon: "small circle icon"
         },
         {
+          id:"checkbox",
           type: "Checkbox",
           icon: "small circle icon"
         },
         {
+          id:"select",
           type: "Dropdown",
           icon: "small circle icon"
         },
         {
+          id:"datetime",
           type: "Date/Time",
           icon: "small circle icon"
         }
       ],
       PredefinedFields: [
-        {
-          type: "First Name",
+        { id:"fname",
+          type: "Firsts Name",
           icon: "small circle icon"
         },
         {
+          id:"lname",
           type: "Last Name",
           icon: "small circle icon"
         },
-        {
+        { id:"mname",
           type: "Middle Name",
           icon: "small circle icon"
         },
-        {
+        {id:"resume",
           type: "Resume",
           icon: "small circle icon"
         }

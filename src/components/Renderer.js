@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AddRow from "./RendererComponents/AddRow";
 import AddField from "./RendererComponents/AddField";
 const title1 = {
@@ -46,12 +47,15 @@ export class Renderer extends Component {
     const deleteEvent = (x) => {
 
       const filteredForm = this.props.data.FormFormat.filter((item) => 
-        item.id !== x); 
-        console.log(filteredForm)
-
+      item.id !== x); 
       this.props.deleteElement(filteredForm)
 
     };
+
+
+    const insertEvent =(x1) => {
+      console.log("here is insert x1",x1)
+    }
 
     return (
       <div className="renderer">
@@ -75,6 +79,8 @@ export class Renderer extends Component {
           <button className="ui primary button" onClick={addNewColumn}>
             New Column
           </button>
+
+
           <button className="ui primary button" onClick={addNewRow}>
             New Row
           </button>
@@ -92,6 +98,8 @@ export class Renderer extends Component {
                     id={element.id}
                     delete={deleteEvent}
                     key={element.id}
+                    insert={insertEvent}
+                  
                   />
                   <br />
                 </div>
