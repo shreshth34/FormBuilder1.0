@@ -107,34 +107,34 @@ class App extends Component {
   }
 
   render() {
-    console.log("here is form form", this.state);
-
     const setFormFormat = e => {
       this.setState({
         FormFormat: [...this.state.FormFormat, e]
+      });
+    };
+    const clickOnIt = () => {
+      console.log("why you clicked");
+    };
+    const deleteElement =(e2)=>{
+console.log("delete is working",e2)
+      this.setState({
+        FormFormat: e2
       })
     }
-      const clickOnIt = () => {
+  
 
-        console.log("why you clicked")
+    const handleInput = e => {
+      this.setState({
+        FormTitle: e.target.value
+      });
+    };
 
-      }
-
-     const updateFormat = (e1)=> {
-       this.setState({
-         FormFormat: e1
-       })
-     }
-       
-    // let clickArr=[]
-    // clickArr = this.state.FormFormat.filter((e)=>{
-    //   return e.id != null
-    // })
-
-    // console.log(clickArr)
-   
-    
-
+    const handleDesc = e => {
+      this.setState({
+        FormDescription: e.target.value
+      });
+    };
+    console.log(this.state)
     return (
       <div className="ui App">
         <div className="ui equal width stackable grid">
@@ -149,7 +149,9 @@ class App extends Component {
             <Renderer
               data={this.state}
               changed={setFormFormat}
-              input1={updateFormat}
+              deleteElement={deleteElement}
+              changed2={handleInput}
+              changedDesc={handleDesc}
             />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
+import "/Users/Shreshth Juneja/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
 const showFieldsOnClick = () => {};
 
 export class AddOns extends Component {

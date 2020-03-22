@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "/home/local/INTERNAL/shreshth.j/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
+import "/Users/Shreshth Juneja/Desktop/FormBuilder1.0/FormBuilder1.0/src/App.css";
 import FieldDiv from "./FieldDiv";
 
 export class BasicFields extends Component {
@@ -29,7 +29,8 @@ export class BasicFields extends Component {
       fontFamily: "Roboto",
       fontSize: "14px",
       lineHeight: "19px",
-      textAlign: "left"
+      textAlign: "left",
+      cursor:"pointer"
     };
 
     const angleIcon = {

@@ -25,14 +25,13 @@ class AddField extends Component {
 
 
 render(){
- 
   return (
     <div style={addField} id={this.props.id}>
       <div style={iconic}>        
         <i class="blue plus circle icon"></i>
         <p>{this.props.id}</p>
       </div>
-      <button onClick={this.props.delete}>remove</button>
+      <button onClick={()=>this.props.delete(this.props.id)}>remove</button>
     </div>
   );
 }
