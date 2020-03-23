@@ -35,11 +35,10 @@ export class Renderer extends Component {
 
     const addNewColumn = () => {
       return this.props.changed({
-        type: "",
         id: `${Math.random()
           .toString(36)
           .substr(2, 9)}`,
-        uiElement: "",
+      
         addedField: []
       });
     };
@@ -96,6 +95,7 @@ export class Renderer extends Component {
                 <div className="column">
                   <AddField
                     id={element.id}
+                    addedField={element.addedField}
                     delete={deleteEvent}
                     key={element.id}
                     insert={insertEvent}

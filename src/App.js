@@ -12,87 +12,83 @@ class App extends Component {
       FormDescription: "Form Description",
 
       uiElements: [
-        { id:"text",
-          type: "Text Field",
-          icon: "small font icon"
-        },
-        { id:"desc",
-          type: "Description",
-          icon: "small circle icon"
-        },
+        { id: "text", type: "Text Field", icon: "small font icon" },
+        { id: "desc", type: "Description", icon: "small circle icon" },
         {
-          id:"link",
+          id: "link",
           type: "Link",
           icon: "small circle icon"
         },
         {
-          id:"file",
+          id: "file",
           type: "File Upload",
           icon: "small circle icon"
         },
         {
-          id:"email",
+          id: "email",
           type: "Email",
           icon: "small circle icon"
         },
         {
-          id:"number",
+          id: "number",
           type: "Number",
           icon: "small circle icon"
         },
         {
-          id:"radio",
+          id: "radio",
           type: "Radio Button",
           icon: "small circle icon"
         },
         {
-          id:"checkbox",
+          id: "checkbox",
           type: "Checkbox",
           icon: "small circle icon"
         },
         {
-          id:"select",
+          id: "select",
           type: "Dropdown",
           icon: "small circle icon"
         },
         {
-          id:"datetime",
+          id: "datetime",
           type: "Date/Time",
           icon: "small circle icon"
         }
       ],
       PredefinedFields: [
-        { id:"fname",
-          type: "Firsts Name",
-          icon: "small circle icon"
+        { 
+          id: "fname", 
+          label:"First Name",
+          type: "First Name", 
+          icon: "small circle icon" 
         },
         {
-          id:"lname",
+          id: "lname",
           type: "Last Name",
           icon: "small circle icon"
         },
-        { id:"mname",
-          type: "Middle Name",
-          icon: "small circle icon"
-        },
-        {id:"resume",
-          type: "Resume",
-          icon: "small circle icon"
-        }
+        { id: "mname", type: "Middle Name", icon: "small circle icon" },
+        { id: "resume", type: "Resume", icon: "small circle icon" }
       ],
       FormFormat: [
-        // {
-        //   type: "First Name",
-        //   id: 22,
-        //   uiElement:"Text Field",
-        //   addedField:[]
-        // },
-        // {
-        //   type: "Last Name",
-        //   id: 33,
-        //   uiElement:"Text Field",
-        //   addedField:[]
-        // },
+        {
+          id: 22,
+          addedField: [{
+            id:"input1",
+            label:"First Name",
+            data_type:"text",
+            uiElement:"Text Field"
+          }]
+        },
+        {
+          id: 33,
+          addedField:[{
+            id:"input2",
+            label:"Age",
+            data_type:"number",
+            uiElement:"Number"
+          }]
+        },
         // {
         //   type: "Email",
         //   id: 44,
@@ -124,13 +120,12 @@ class App extends Component {
     const clickOnIt = () => {
       console.log("why you clicked");
     };
-    const deleteElement =(e2)=>{
-console.log("delete is working",e2)
+    const deleteElement = e2 => {
+      console.log("delete is working", e2);
       this.setState({
         FormFormat: e2
-      })
-    }
-  
+      });
+    };
 
     const handleInput = e => {
       this.setState({
@@ -143,7 +138,7 @@ console.log("delete is working",e2)
         FormDescription: e.target.value
       });
     };
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div className="ui App">
         <div className="ui equal width stackable grid">

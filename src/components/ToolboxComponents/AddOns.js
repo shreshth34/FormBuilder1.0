@@ -20,7 +20,7 @@ export class AddOns extends Component {
       width: "60px",
       color: "#33A5C9"
     };
-
+console.log("fresh legs")
     return (
       <div className="ui grid" id="basic_fields" onClick={showFieldsOnClick}>
         <div style={pStyle} className="thirteen wide column">
