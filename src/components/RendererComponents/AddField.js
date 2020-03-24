@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-
-
 const iconic = {
   padding: "18px"
 
@@ -9,7 +7,9 @@ const iconic = {
 
 
 const addField = {
-  height:"50px",
+  
+  padding: "18px",
+  width:"406px",
   borderRadius: "4px",
   backgroundColor: "#FFFFFF",
   boxShadow: "2px 2px 2px 2px lightblue"
@@ -41,7 +41,7 @@ render(){
     return (
       <div style={addField} id={this.props.id}>        
 
-      <label  style={iconic} htmlFor={this.props.addedField[0].id}>{this.props.addedField[0].label}</label><input type={this.props.addedField[0].data_type} />
+      <label style={iconic} htmlFor={this.props.addedField[0].id}>{this.props.addedField[0].label}</label><input type={this.props.addedField[0].data_type} />
       
       <button onClick={()=>this.props.delete(this.props.id)}>edit</button>
     </div>  )

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../App.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import AddRow from "./RendererComponents/AddRow";
 import AddField from "./RendererComponents/AddField";
 const title1 = {
   border: "1px solid white",
@@ -16,7 +14,7 @@ const title1 = {
 const desc1 = {
   border: "1px solid white",
   height: "19px",
-  color: "#9B9B9B",
+  color : "#9B9B9B",
   fontFamily: "Roboto",
   fontSize: "14px",
   lineHeight: "19px",
@@ -39,7 +37,11 @@ export class Renderer extends Component {
           .toString(36)
           .substr(2, 9)}`,
       
-        addedField: []
+        addedField:[{
+          id:"",
+          label:"",
+          data_type:"",
+        }]
       });
     };
 
@@ -53,7 +55,7 @@ export class Renderer extends Component {
 
 
     const insertEvent =(x1) => {
-      console.log("here is insert x1",x1)
+      this.props.insert(x1)
     }
 
     return (
@@ -90,6 +92,7 @@ export class Renderer extends Component {
 
         <div className="ui equal width column stackable grid" align="center">
           {this.props.data.FormFormat.map(element => {
+            console.log("hello")
             if (element.pos === undefined) {
               return (
                 <div className="column">

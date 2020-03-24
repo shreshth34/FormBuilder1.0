@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ToolboxNavbar from "./ToolboxComponents/ToolboxNavbar";
 import SearchComponent from './ToolboxComponents/SearchComponent';
 import BasicFields from './ToolboxComponents/BasicFields'
@@ -6,19 +6,32 @@ import "../App.css";
 import PreDefinedFields from "./ToolboxComponents/PreDefinedFields";
 import AddOns from "./ToolboxComponents/AddOns";
 
-const Toolbox =(props) => {
+class Toolbox extends Component {
+// eslint-disable-next-line
+constructor(props){
+  super(props)
+}
+
+  render(){
+
+    const selectedFieldToApp = (y) => {
+
+      this.props.selectedFieldFromApp(y)
+    
+    }
+
   return (
       <div className="toolbox">
           
         <ToolboxNavbar />
         <SearchComponent />
-        <BasicFields data={props.data}/>
-        <PreDefinedFields predef={props.predef} />
+        <BasicFields data={this.props.data}/>
+        <PreDefinedFields predef={this.props.predef} selectedField={selectedFieldToApp}/>
         <AddOns />
         
       </div>
     );
   
 }
-
+}
 export default Toolbox;
