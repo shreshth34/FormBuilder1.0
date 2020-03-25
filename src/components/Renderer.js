@@ -1,24 +1,29 @@
 import React, { Component } from "react";
 import "../App.css";
 import AddField from "./RendererComponents/AddField";
+
 const title1 = {
+
   border: "1px solid white",
   height: "37px",
+  width:"880px",
   color: "#4A4A4A",
   fontFamily: "Roboto",
   fontSize: "28px",
   lineHeight: "37px",
-  textAlign: "center"
+  textAlign: "left"
+
 };
 
 const desc1 = {
   border: "1px solid white",
   height: "19px",
+  width:"880px",
   color : "#9B9B9B",
   fontFamily: "Roboto",
   fontSize: "14px",
   lineHeight: "19px",
-  textAlign: "center"
+  textAlign: "left"
 };
 
 export class Renderer extends Component {

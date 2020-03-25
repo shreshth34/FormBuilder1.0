@@ -129,9 +129,9 @@ class App extends Component {
 
   render() {
     const setFormFormat = e => {
-      console.log("here is e", e)
+      console.log("here is e", e);
       this.setState({
-        FormFormat: [...this.state.FormFormat, e]
+        FormFormat: [ ...this.state.FormFormat, e]
       });
     };
 
@@ -153,52 +153,46 @@ class App extends Component {
       });
     };
 
-    let displayArr=0;
+    let displayArr = 0;
     let insertEvent = index => {
       const saveToId = index;
       displayArr = saveToId;
     };
 
     const selectField1 = index1 => {
-      console.log("djdhd",index1)
+      console.log("djdhd", index1);
       let filt1 = this.state.PredefinedFields.filter(e => {
         return e.id === index1;
       });
 
       this.state.FormFormat.map(elem => {
-        
         if (elem.id === displayArr) {
-
           elem.addedField[0].id = displayArr;
           elem.addedField[0].label = filt1[0].label;
           elem.addedField[0].data_type = filt1[0].data_type;
           elem.addedField[0].uiElement = filt1[0].uiElement;
-                                                 
-          console.log("here is what we got in elem ater setting form filt",elem)
 
-          return changeInsertState(elem)
-        }        
+          console.log(
+            "here is what we got in elem ater setting form filt",
+            elem
+          );
+
+          return changeInsertState(elem);
+        }
       });
     };
 
-    let changeInsertState = (p) => {
-
-      this.state.FormFormat.map((e)=>{
-        if(e.id === p.id){
-          
+    let changeInsertState = p => {
+      this.state.FormFormat.map(e => {
+        if (e.id === p.id) {
           this.setState({
-            ...this.state.FormFormat, p
-          })
-
+            ...this.state.FormFormat,
+            p
+          });
         }
-        
+      });
+    };
 
-      })
-     
-    }      
-      
-    
-  
     return (
       <div className="ui App">
         <div className="ui equal width stackable grid">
@@ -218,7 +212,6 @@ class App extends Component {
               changed2={handleInput}
               changedDesc={handleDesc}
               insert={insertEvent}
-            
             />
           </div>
         </div>
